@@ -48,7 +48,7 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Start Time*</mat-label>
-          <mat-select [formControl]="startTime" [(value)]="selectedStartTime" (selectionChange)="checkContactForm()">
+          <mat-select [formControl]="startTime" [(value)]="selectedstartTime" (selectionChange)="checkContactForm()">
             <mat-option *ngFor="let cp of startTimeOptions" [value]="cp.value">{{cp.name}}</mat-option>
           </mat-select>
           <mat-error *ngIf="startTime.invalid && startTime.touched" class="has-text-danger">
