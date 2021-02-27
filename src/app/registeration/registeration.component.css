@@ -4,7 +4,14 @@
 
 #pimg {
     width:20%;
-    background-color: gray;
+    background-color: beige;
+    text-align: center;
+    align-self: center;
+    border: 1px grey solid;
+}
+
+img {
+    border-radius: 100%;
 }
 
 #profile-Details {
@@ -46,7 +53,8 @@ mat-card .mat-radio-button{
     }
     #pimg {
         width: 70%;
-        background-color: gray;
+        background-color: beige;
+        border: 1px grey solid;
         margin: 15px;
         align-self: center;
     }
@@ -68,7 +76,8 @@ mat-card .mat-radio-button{
     }
     #pimg {
         width: 50%;
-        background-color: gray;
+        background-color: beige;
+        border: 1px grey solid;
         margin: 15px;
         align-self: center;
     }
