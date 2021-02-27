@@ -36,3 +36,47 @@ mat-card .mat-radio-button{
 .mat-card {
     border-top: 2px blueviolet solid;
 }
+
+@media (max-width: 400px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    #pimg {
+        width: 70%;
+        background-color: gray;
+        margin: 15px;
+        align-self: center;
+    }
+    #profile-Details {
+        text-align: end;
+    }
+    .mat-form-field {
+        margin: 0 12px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 750px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    #pimg {
+        width: 50%;
+        background-color: gray;
+        margin: 15px;
+        align-self: center;
+    }
+    #profile-Details {
+        /* width: 50%; */
+        align-self: center;
+        text-align: center;
+    }
+    .mat-form-field {
+        margin: 0 12px;
+        width: 90%;
+    }
+}
