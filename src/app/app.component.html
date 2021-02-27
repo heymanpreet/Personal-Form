@@ -22,13 +22,13 @@
   </div>
   <div class="btn-group">
   <!-- <button mat-raised-button [disabled]="registerForm.invalid" color="primary" (click)= "register(registerForm.value)">Save & Continue</button> -->
-  <button mat-raised-button color="primary" [disabled]= "!registerFormValidity || !contactFormValidity || !emergencyContactFormValidity || !familyInfoFormValidity">Save & Continue</button>
+  <button mat-raised-button color="primary" [disabled]= "!registerFormValidity || !contactFormValidity || !emergencyContactFormValidity || !familyInfoFormValidity" (click) = "showMessage()">Save & Continue</button>
   <button mat-raised-button color="primary" disabled>Reset</button>
-  <button mat-raised-button color="primary" [disabled]= "!registerFormValidity || !contactFormValidity || !emergencyContactFormValidity || !familyInfoFormValidity">Continue</button>
-
-      <!-- <mat-error *ngIf="registrationInfo" style="color: green;text-align: center;margin: 10px;">
+  <button mat-raised-button color="primary" [disabled]= "!registerFormValidity || !contactFormValidity || !emergencyContactFormValidity || !familyInfoFormValidity" (click) = "showMessage()">Continue</button>
+  
+      <mat-error *ngIf="successMessage" style="color: green;text-align: center;margin: 10px;font-weight: bold;">
         Registration Successfull.
-      </mat-error> -->
+      </mat-error>
   </div>
   
 </div>

@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
   contactFormValidity: any;
   emergencyContactFormValidity: any;
   familyInfoFormValidity: any;
+  successMessage: boolean = false;
 
   constructor(private fb:FormBuilder,private location: Location,private router: Router){}
   ngOnInit() {
@@ -87,4 +88,7 @@ export class AppComponent implements OnInit {
     console.log(this.familyInfoFormValidity);
   }
   
+  showMessage() {
+    this.successMessage = true;
+  }
 }
