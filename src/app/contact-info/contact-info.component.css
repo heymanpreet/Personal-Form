@@ -1,0 +1,38 @@
+.registration-card {
+    height: auto;
+}
+
+#profile-Details {
+    /* width:80%; */
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.mat-card {
+    border-top: 2px blueviolet solid;
+}
+
+.mat-card-header {
+    /* justify-content: center; */
+}
+
+mat-card .mat-radio-button{
+    margin: 0 12px;
+  }
+.mat-card-content {
+    align-items: center;
+}
+.mat-form-field,button,mat-radio-group {
+    margin: 0 12px;
+    /* max-width: 40%; */
+    align-self: center;
+    width: auto;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    top: 0.75em !important;
+}

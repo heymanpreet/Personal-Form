@@ -1,0 +1,87 @@
+<mat-card class="registration-card">
+  <mat-card-content>
+
+    <form [formGroup]="registerForm">
+      <!-- Value: {{ registerForm.value | json }} -->
+
+      <span id="pimg">
+        <h1>Profile Pic</h1>
+        <img src="" alt="">
+      </span>
+
+
+      <span id="profile-Details">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Profile*</mat-label>
+          <mat-select [formControl]="profile" [(value)]="selectedProfile" (selectionChange)="checkRegisterForm()">
+            <mat-option *ngFor="let prof of profileOptions" [value]="prof.value">{{prof.name}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="profile.invalid && profile.touched" class="has-text-danger">
+            Please select your profile
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" (change) = "checkRegisterForm()">
+          <mat-label>First Name*</mat-label>
+          <input matInput placeholder="First Name" formControlName="firstName">
+          <mat-error *ngIf="firstName.invalid && firstName.touched" class="has-text-danger">
+            Please Enter your First Name
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Middle Name</mat-label>
+          <input matInput placeholder="Middle Name" type="text" formControlName="middleName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" (change) = "checkRegisterForm()">
+          <mat-label>Last Name*</mat-label>
+          <input matInput placeholder="Last Name" formControlName="lastName">
+          <mat-error *ngIf="lastName.invalid && lastName.touched" class="has-text-danger">
+            Please Enter your Last Name
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Suffix</mat-label>
+          <input matInput placeholder="Suffix" formControlName="suffix">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nickname</mat-label>
+          <input matInput placeholder="Nickname" formControlName="nickName">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Date Of Birth*</mat-label>
+          <input matInput [matDatepicker]="picker" [formControl]="dob" placeholder="Date of Birth" (dateInput)="checkRegisterForm()">
+          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="dob.invalid && dob.touched" class="has-text-danger">
+            Please Enter your Date of Birth
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Gender*</mat-label>
+          <mat-select [formControl]="gender" [(value)]="selectedGender" (selectionChange)="checkRegisterForm()">
+            <mat-option *ngFor="let gen of genderOptions" [value]="gen.value">{{gen.name}}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="gender.invalid && gender.touched" class="has-text-danger">
+            Please select your Gender
+          </mat-error>
+        </mat-form-field>
+        <!-- <p>{{selectedGender}}</p> -->
+
+        <mat-form-field appearance="outline">
+          <mat-label>Sexual Orientation</mat-label>
+          <mat-select [formControl]="orientation" [(value)]="selectedOrientation">
+            <mat-option *ngFor="let ori of orientationOptions" [value]="ori.value">{{ori.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </span>
+    </form>
+  </mat-card-content>
+
+</mat-card>
